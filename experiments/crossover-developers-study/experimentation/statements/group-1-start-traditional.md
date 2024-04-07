@@ -1,8 +1,8 @@
 # Pivo Crossover Developer Study - Experiment Statement
 
-Group: 1
-First 2 hours: traditional approach
-Last 2 hours: Pivo (evolvable-by-design approach)
+Group: 1<br>
+First 2 hours: traditional approach<br>
+Last 2 hours: Pivo (evolvable-by-design approach)<br>
 
 ## Experiment Prerequisites
 
@@ -32,7 +32,7 @@ Please create a new branch for each method (traditional and with pivo): `git che
 
 Then within each branch, can you please create one commit per major step, for each version:
 
-1. First implementation
+1. First implementation(when using pivo)
 2. Upgrade of the frontend to the REST API evolution 1
 3. Upgrade of the frontend to the REST API evolution 2
 4. Upgrade of the frontend to the REST API evolution 3
@@ -40,7 +40,7 @@ Then within each branch, can you please create one commit per major step, for ea
 
 ### Project Structure
 
-The project is a classic React project. So the root file is `src/index.js` and the main `App` component is in `src/App.jsx`. Yet, you should not need to modify these files.
+The project is a classic React project using vite.
 
 Concerning the other folders, `commons` contain models and controllers and `functional` and `imperative` contain the React components.
 

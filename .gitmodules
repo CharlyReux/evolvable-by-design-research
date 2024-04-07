@@ -1,0 +1,6 @@
+[submodule "experiments/crossover-developers-study/experimentation/implementations/evolvable-by-design-todomvc-frontend"]
+	path = experiments/crossover-developers-study/experimentation/implementations/evolvable-by-design-todomvc-frontend
+	url = git@github.com:CharlyReux/evolvable-by-design-todomvc-frontend.git
+[submodule "experiments/crossover-developers-study/experimentation/implementations/evolvable-by-design-todomvc-backend"]
+	path = experiments/crossover-developers-study/experimentation/implementations/evolvable-by-design-todomvc-backend
+	url = git@github.com:CharlyReux/evolvable-by-design-todomvc-backend.git
