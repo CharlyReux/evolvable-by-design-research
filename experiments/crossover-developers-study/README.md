@@ -1,6 +1,4 @@
-# [WIP] Developers Experimentation
-
-**WARNING: this experiment has not been run yet, this is a work in progress**
+# Developers Experimentation
 
 > Crossover study, a variant of within-subject design in which all participants are exposed sequentially to all variances of the task
 
@@ -8,7 +6,7 @@ Example article implementing this method: http://www.jot.fm/issues/issue_2019_02
 
 ## Objectives
 
-- Compare the effort required, with and without the approach, to develop and maintain a frontend that uses an evolving API -> Unit? Time?
+- Compare the effort required, with and without the approach, to develop and maintain a frontend that uses an evolving API -> Effort? Time?
 - Obtain an evaluation of the effort felt by the developer -> scale from 1 to 8?
 - Would the developers consider using it on a new project? Why?
 - Would the developers consider implementing it on an existing project? Why?
@@ -28,6 +26,11 @@ Developers experience: sufficently experienced with React to be comfortable deve
 - The frontend application to build consumes an evolving API. Each group is given the same API that has five versions: an initial one and four others introducing four types of REST API evolution. The developer will then have to implement a working version of the frontend for each version of the API, with the two aforementioned approaches.
 - Each group will have to handle at least one evolution that is common with another group.
 - The end goal is to test all types of evolutions.
+
+### first draft protocol
+![](protocol_experiment.drawio.png)
+
+
 
 ## Artefacts
 
