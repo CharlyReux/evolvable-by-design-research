@@ -22,7 +22,7 @@ Developers experience: sufficiently experienced with React to be comfortable dev
 ### Organization and groups
 
 - The developers are split into groups of at least 2 where each developer works individually
-- Each developer have to implement the same frontend application with the traditional approach and with the evolvable-by-design approach. Within a group, half of the developers start with the traditional approach and the other half with the evolvable-by-design approach. The developer is assigned 2 hours for each approach.
+- Each developer have to implement the same frontend application with the traditional approach and with the evolvable-by-design approach. One groupe starts with the traditional approach and the other with the evolvable-by-design approach. The developers are assigned 1h30 for each approach.
 - The frontend application to build consumes an evolving API. Each group is given the same API that has five versions: an initial one and four others introducing 10 types of REST API evolution that we found to be the most common in open source projects. The developer will then have to implement a working version of the frontend for each version of the API, with the two aforementioned approaches.
 - Both group will then have to migrate another part of the application written in the traditional approach to the Pivo approach. They will be assigned 1 hour on this task.
 
