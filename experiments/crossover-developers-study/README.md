@@ -17,7 +17,7 @@ Example article implementing this method: http://www.jot.fm/issues/issue_2019_02
 
 Duration: 4 hours
 Minimum Developers Required: 18
-Developers experience: sufficently experienced with React to be comfortable developing new React components and using higher-order components. An experience with the react hooks would be a plus.
+Developers experience: sufficiently experienced with React to be comfortable developing new React components and using higher-order components. An experience with the React hooks would be a plus.
 
 ### Organization and groups
 
@@ -31,7 +31,7 @@ Developers experience: sufficently experienced with React to be comfortable deve
 
 
 
-## Artefacts
+## Artifacts
 
 
 - [Questionnaires](./questionnaires.md)
