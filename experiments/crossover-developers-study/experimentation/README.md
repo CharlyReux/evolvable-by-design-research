@@ -27,7 +27,7 @@ Before starting the experiment, please fill in the following questionnaire: LINK
 
 Each one of the participants has been assigned a group. Both groups will implement using both approaches. The group 1 will start with the implementation with the traditional method and the other one with Pivo.
 
-To get started, click on your group in  the following list:
+To get started, click on your group in the following list:
 
 - [Group 1](/statements/group-1.md) TODO
 - [Group 2](/statements/group-2.md) TODO
