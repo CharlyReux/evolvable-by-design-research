@@ -86,8 +86,8 @@
   -  10 : combine method GET `/todo/{todoId}/author` and GET `/todo/{todoId}/tags` to GET `/todo/{todoId}/details`{todo}
   -  29 : Remove the `dueDate` return value from the todo response.
 -  Group 2
-   -  5 : Rename GET /todos into GET /
+   -  5 : Rename GET /todos into GET /todo
    -  6 : Rename `title` into `text`
-   -  23 :  Change PUT /todo/{todoId} into POST /todo/{todoId}
+   -  23 : Change PUT /todo/{todoId} into POST /todo/{todoId}
    -  26 : To delete a todo, first complete it and then run delete, before it was possible to delete right away
    -  28 : move the location of the id parameter from the path to the query
