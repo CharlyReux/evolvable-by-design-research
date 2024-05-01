@@ -57,15 +57,37 @@
     > only one call to `/api/poll/update1` to update a poll
 
 ## Correspondance in the todoMvc application
-| Index | Type of evolution                                           | Actual Evolution on the API                                                                          |
-| ----- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| 1     | Add or Remove Parameter                                     | Add a required `dueDate` body parameter of type date (not date-time) to POST /todo                   |
-| 3     | Change Type of Return Value                                 | Move `status` of Task inside a `details` object                                                      |
-| 5     | Rename Method                                               | Rename GET /todos into GET /todo                                                                     |
-| 6     | Rename Parameter                                            | Rename `title` into `text`                                                                           |
-| 10    | Combine Methods                                             | Combine two methods to add a tag to a todo `/tag/{tagName}` to create a tag and  `/todo/{id}/{tagName}` to tag a todo, to only  `/todo/{id}/{tagName}` to create it and tag the todo                                                                      |
-| 17    | Move API elements                                           | !! .......... TODO ..........                                                                        |
-| 23    | Request Method change (e.g. POST, PUT, etc.)                | Change PUT /todo/{todoId} into POST /todo/{todoId}                                                   |
-| 26    | The set of operations to achieve a business process changed | To delete a todo, first complete it and then run delete, before it was possible to delete right away |
-| 28    | Move Parameter                                              | move the location of the id parameter from the path to the query                                                                        |
-| 29    | Remove Return Value                                             | Remove the `author` return value from the todo response  |
+| Index | Type of evolution                                           | Actual Evolution on the API                                                                                                                                                          |
+| ----- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1     | Add or Remove Parameter                                     | Add a required `dueDate` body parameter of type date (not date-time) to POST /todo                                                                                                   |
+| 3     | Change Type of Return Value                                 | Move `dueDate` attributes of Todo inside a new element `infos` IMPORTANT: depends on the evolution 1                                                                               |
+| 5     | Rename Method                                               | Rename GET /todos into GET /todo                                                                                                                                                     |
+| 6     | Rename Parameter                                            | Rename `title` into `text`                                                                                                                                                           |
+| 10    | Combine Methods                                             | combine method GET `/todo/{todoId}/author` and GET `/todo/{todoId}/tags` to GET `/todo/{todoId}/details`{todo} |                                                                                                                                                        |
+| 17    | Move API elements                                           | Move `status` inside the existing `infos`. IMPORTANT: depends on the evolution 3 to be already done(i.e. `details` already exists), otherwise it is an evolution of type 3 as well |
+| 23    | Request Method change (e.g. POST, PUT, etc.)                | Change PUT /todo/{todoId} into POST /todo/{todoId}                                                                                                                                   |
+| 26    | The set of operations to achieve a business process changed | To delete a todo, first complete it and then run delete, before it was possible to delete right away                                                                                 |
+| 28    | Move Parameter                                              | move the location of the id parameter from the path to the query                                                                                                                     |
+| 29    | Remove Return Value                                         | Remove the `dueDate` return value from the todo response  IMPORTANT: depends on evolution 1                                                                                                                           |
+
+
+## Possible non atomic changes
+- Combine two methods to add a tag to a todo: `/tag/{tagName}` to create a tag, and  `/todo/{id}/{tagName}` to tag a todo. To only  `/todo/{id}/{tagName}` to create it and tag the todo
+  - change behavior
+  - error return
+  - method suppresion 
+
+
+## evolutions for each group
+- Group 1
+  -  1 : Add a required `dueDate` body parameter of type date (not date-time) to POST /todo.
+  -  3 : Move `dueDate` attributes of Todo inside a new element `infos`.
+  -  17 : Move `status` inside the existing `infos`.
+  -  10 : combine method GET `/todo/{todoId}/author` and GET `/todo/{todoId}/tags` to GET `/todo/{todoId}/details`{todo}
+  -  29 : Remove the `dueDate` return value from the todo response.
+-  Group 2
+   -  5 : Rename GET /todos into GET /
+   -  6 : Rename `title` into `text`
+   -  23 :  Change PUT /todo/{todoId} into POST /todo/{todoId}
+   -  26 : To delete a todo, first complete it and then run delete, before it was possible to delete right away
+   -  28 : move the location of the id parameter from the path to the query
