@@ -6,44 +6,71 @@ Last 2 hours: Pivo (evolvable-by-design approach)<br>
 
 ## Experiment Prerequisites
 
-Before you start the experiment, please make sure that you have:
-
-- Git installed
-- [Node.js](https://nodejs.org) installed
-- An IDE that you feel comfortable with to develop in JavaScript with React (such as VS Code)
+TODO link the code space
 
 ## Getting Started
 
-Go to the directory where you want to clone the experimentation repository. Then:
 
-```bash
-git clone https://github.com/evolvable-by-design/todomvc
-cd todomvc
-npm install
+The app you will be working on is a simple todo app. 
+
+The objective is to have an app that will look like this.  
+<img src="images/main_app.png" style="width:50rem">
+
+Upon clicking on the individual todos, you have access to the details of that todo.   
+<img src="images/details.png" style="width:50rem">
+
+An initial skeleton of the app is already provided, all you will have to do is to fill in some methods and replace some comments in specific.
+
+### Details
+The app is composed of multiple parts with the most important ones being:
+- Components
+  - TodoListPage contains the main application
+  - TodoList contains the list of todos
+  - DetailDialog contains the dialog component displaying the author and tag information of a todo
+- Service
+  - TodoService contains the methods used to call the backend
+
+You will mainly have to modify the TodoService, and slightly the TodoListPage and the TodoList.
+
+TODO present the app more
+
+### Procedure
+There are two sets of 5 evolutions, As the first group, you will start by making the front-end implementation in a classical manner, and then apply each evolution consecutively. 
+
+When you are ready run the command:
+```sh
+TODO make the script that create a branch and checks out the back
 ```
 
-Then, we propose you to choose the paradigm you prefer the most with React: either imperative, i.e. using classes or functional, using React hooks. If you are not familiar with React hooks, we recommend you to go with the class version (imperative paradigm). To select a version, please go to `src/config.js` and configure the `app` field at line 2 with the paradigm you chose.
 
-Then, if you chose the `imperative` paradigm, you can ignore the content of the `src/functional` directory. On the other hand if you chose the `functional` paradigm, you can ignore the content of the `src/imperative` directory.
+#### 1. Classical implementation
+TODO add specification about the script that has to be ran
 
-### Git Management
+To make things easier, you can check the swagger ui while coding(TODO specify how to access it) or the file directly(TODO provide the acces to the file)  
 
-Please create a new branch for each method (traditional and with pivo): `git checkout -b experiment/{{your-github-name}}/{{method}}` where method is either `pivo` or `traditional`. So, you will do it at the beginning of the experiment and after two hours when you start the implementation with the second approach.
+1. First implementation
+   1. Instantiate the service in the todolistpage
+   2. Implement the methods in the TodoService
+   3. Once done, run the following command: TODO `Add the command form the script` 
+2. Add a required `dueDate` body parameter of type datetime to POST /todo.
+3. Move `dueDate` attributes of Todo inside a new element `infos`.
+4. Move the `completed` element inside the existing `infos`
+5. Remove the `dueDate` return value from the infos response.
+6. move the location of the id parameter from the path to the query in the tag method 
 
-Then within each branch, can you please create one commit per major step, for each version:
 
-1. First implementation(when using pivo)
-2. Upgrade of the frontend to the REST API evolution 1
-3. Upgrade of the frontend to the REST API evolution 2
-4. Upgrade of the frontend to the REST API evolution 3
-5. Upgrade of the frontend to the REST API evolution 4
+#### 2. Pivo implementation
+TODO add spec about the pivo implementation
+TODO add specification about the script that has to be ran
 
-### Project Structure
+1. First implementation
+   1. Instantiate the service in the todolistpage
+   2. Modify the TodoList component to use semantic data(You can use the utilitary component `with-semantic-data-required.jsx`)
+   3. Implement the methods in the TodoService
+   4. Once done, run the following command: TODO `Add the command form the script` 
+2. Rename GET /todos into GET /todo
+3. Rename `title` into `text` in creation and update methods
+4. combine method GET `/todo/{todoId}/author` and GET `/todo/{todoId}/tag` to GET `/todo/{todoId}/details`
+5. Change PUT /todo/{todoId} into POST /todo/{todoId}
+6. To delete a todo, first complete it and then run delete, before it was possible to delete right away
 
-The project is a classic React project using vite.
-
-Concerning the other folders, `commons` contain models and controllers and `functional` and `imperative` contain the React components.
-
-To get started, open the `{{functional or imperative}}/TodoListPage.jsx` file and go to the next section.
-
-## Method 1: traditional

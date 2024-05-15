@@ -29,6 +29,6 @@ Each one of the participants has been assigned a group. Both groups will impleme
 
 To get started, click on your group in the following list:
 
-- [Group 1](/statements/group-1.md) TODO
-- [Group 2](/statements/group-2.md) TODO
+- [Group 1](statements/group-1.md) TODO
+- [Group 2](statements/group-2.md) TODO
 
