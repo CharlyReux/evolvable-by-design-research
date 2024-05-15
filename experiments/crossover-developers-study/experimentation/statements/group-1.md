@@ -30,8 +30,8 @@ The app is composed of multiple parts with the most important ones being:
 - Service
   - TodoService contains the methods used to call the backend
 
-You will mainly have to modify the TodoService, and slightly the TodoListPage and the TodoList.
-
+You will mainly have to modify the TodoService, and slightly the TodoListPage and the TodoList.  
+:warning: the TodoService needs to be implemented in a functionnal manner, each method returns the full list of todos
 TODO present the app more
 
 ### Procedure
@@ -46,7 +46,7 @@ TODO make the script that create a branch and checks out the back
 #### 1. Classical implementation
 TODO add specification about the script that has to be ran
 
-To make things easier, you can check the swagger ui while coding(TODO specify how to access it) or the file directly(TODO provide the acces to the file)  
+To make things easier, you can check the swagger ui while coding(TODO specify how to access it) or the openapi specification directly(TODO provide the acces to the file)  
 
 1. First implementation
    1. Instantiate the service in the todolistpage
