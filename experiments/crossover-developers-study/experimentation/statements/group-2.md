@@ -1,8 +1,8 @@
 # Pivo Crossover Developer Study - Experiment Statement
 
-Group: 1<br>
-First 2 hours: traditional approach<br>
-Last 2 hours: Pivo (evolvable-by-design approach)<br>
+Group: 2  
+First 2 hours: traditional approach  
+Last 2 hours: Pivo (evolvable-by-design approach)  
 
 ## Experiment Prerequisites
 
@@ -43,15 +43,16 @@ TODO make the script that create a branch and checks out the back
 ```
 
 
-#### 1. Classical implementation
-TODO add specification about the script that has to be run
+#### 1. Pivo implementation
+TODO add specification about the script that has to be ran
 
-To make things easier, you can check the swagger UI while coding(TODO specify how to access it) or the openApi specification directly(TODO provide the access to the file)  
+To make things easier, you can check the swagger ui while coding(TODO specify how to access it) or the openapi specification directly(TODO provide the access to the file)  
 
 1. First implementation
-   1. Instantiate the service in the todolistpage
-   2. Implement the methods in the TodoService
-   3. Once done, run the following command: TODO `Add the command form the script` 
+   1. Instantiate the service in the todolistpage(You will have to modify The todoService and the TodoList component, you can get inspiration from the [tutorial](https://github.com/CharlyReux/evolvable-by-design-tutorial/blob/main/tutorial.md#setting-up-pivo-in-our-application) we did earlier)
+   2. Modify the TodoList component to use semantic data(You can use the utilitary component `with-semantic-data-required.jsx`)
+   3. Implement the methods in the TodoService
+   4. Once done, run the following command: TODO `Add the command form the script` 
 2. Add a required `dueDate` body parameter of type string to POST /todo.
 3. Move `dueDate` attributes of Todo inside a new element `infos`.
    1. The easier way is to modify the todoService to modify the content of the todo back to its original form.
@@ -61,7 +62,7 @@ To make things easier, you can check the swagger UI while coding(TODO specify ho
 6. move the location of the id parameter from the path to the query in the GET tag method 
 
 
-#### 2. Pivo implementation
+#### 2. Classical implementation
 TODO add spec about the pivo implementation
 TODO add specification about the script that has to be ran
 
