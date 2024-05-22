@@ -1,37 +1,24 @@
-# Developers Experimentation
+# Pivo Crossover Developer Study
 
-> Crossover study, a variant of within-subject design in which all participants are exposed sequentially to all variances of the task
+## Introduction
 
-Example article implementing this method: http://www.jot.fm/issues/issue_2019_02/article10.pdf
+Hi and thank you very much for participating in this study.
 
-## Objectives
+Today, you will implement a frontend application in React that let the user manage a todo list. This application will connect to a REST API in order to interact with the data. Then, the REST API will evolve, and you will have to update the frontend application in order to keep the application working.
 
-- Compare the effort required, with and without the approach, to develop and maintain a frontend that uses an evolving API -> Effort? Time?
-- Obtain an evaluation of the effort felt by the developer -> scale from 1 to 8?
-- Would the developers consider using it on a new project? Why?
-- Would the developers consider implementing it on an existing project? Why?
-- Identify what are the biggest barriers to developers adopting the approach
-- Strengths and interests of the approach? (as seen by the developers)
+You will implement this application twice, using two different methods to connect with the REST API. On the one hand, you will use a traditional approach, the industry standard, where you use an HTTP client to build correct REST API calls and manage the response. On the other hand you will use Pivo, a library that replaces the HTTP client. It offers a JavaScript API that you use to describe what to do on the REST API and what data to obtain. Then, Pivo fetches the API documentation and creates the interaction with the REST API for you. The goal of this library is to manage the evolution of the REST API for you at run-time so that you don't have to update the frontend code when the REST API evolve.
 
-## Protocol
+You are given 2h to implement the pivo version of the frontend application and to update it to four evolutions of the REST API, and 1h30 to implement the pivo version of the frontend application and to update it to four evolutions. Hence, our goal with this study is to obtain your feedbacks about the new method proposed by Pivo to design frontend applications.
 
-Duration: 4 hours
-Minimum Developers Required: 18
-Developers experience: sufficiently experienced with React to be comfortable developing new React components and using higher-order components. An experience with the React hooks would be a plus.
+## Pre-experiment Questionnaire
 
-### Organization and groups
+Before you start coding, could you please fill in the following form: LINK HERE.
 
-- The developers are split into groups of at least 2 where each developer works individually
-- Each developer have to implement the same frontend application with the traditional approach and with the evolvable-by-design approach. One groupe starts with the traditional approach and the other with the evolvable-by-design approach. The developers are assigned 1h30 for each approach.
-- The frontend application to build consumes an evolving API. Each group is given the same API that has five versions: an initial one and four others introducing 10 types of REST API evolution that we found to be the most common in open source projects. The developer will then have to implement a working version of the frontend for each version of the API, with the two aforementioned approaches.
-- Both group will then have to migrate another part of the application written in the traditional approach to the Pivo approach. They will be assigned 1 hour on this task.
+## Tutorial
 
-### first draft protocol
-![](protocol_experiment.drawio.png)
+In order to get you started with the pivo approach, we devised a tutorial, available in your browser or locally, it should be around 30 minutes and can be accessed here: [tutorial](https://github.com/CharlyReux/evolvable-by-design-tutorial).
 
 
+## Post-tutorial Questionnaire
+Before starting the experiment, please fill in the following questionnaire: LINK HERE 
 
-## Artifacts
-
-
-- [Questionnaires](./questionnaires.md)

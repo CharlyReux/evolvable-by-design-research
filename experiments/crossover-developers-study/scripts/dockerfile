@@ -1,6 +1,7 @@
 #DockerFile for the tutorial
 FROM alpine
 RUN apk update && apk upgrade
+RUN apk add github-cli
 RUN apk add openjdk19-jdk
 RUN apk add maven
 RUN apk add npm
