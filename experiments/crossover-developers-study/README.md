@@ -22,3 +22,7 @@ In order to get you started with the pivo approach, we devised a tutorial, avail
 ## Post-tutorial Questionnaire
 Before starting the experiment, please fill in the following questionnaire: LINK HERE 
 
+
+## Experiment
+
+The experiment is situated here https://github.com/CharlyReux/evolvable-by-design-todomvc-frontend/tree/experiment-start, you can now follow the instructions in the README.
