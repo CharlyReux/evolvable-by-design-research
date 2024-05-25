@@ -1,10 +1,11 @@
 #DockerFile for the tutorial
-FROM alpine
+FROM alpine:3.19
 RUN apk update && apk upgrade
 RUN apk add github-cli
 RUN apk add openjdk19-jdk
 RUN apk add maven
 RUN apk add npm
+RUN apk add python3
 
 EXPOSE 3000
 EXPOSE 5173
