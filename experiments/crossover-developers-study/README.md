@@ -10,19 +10,15 @@ You will implement this application twice, using two different methods to connec
 
 You are given 2h to implement the pivo version of the frontend application and to update it to four evolutions of the REST API, and 1h30 to implement the pivo version of the frontend application and to update it to four evolutions. Hence, our goal with this study is to obtain your feedbacks about the new method proposed by Pivo to design frontend applications.
 
-## Pre-experiment Questionnaire
-
-Before you start coding, could you please fill in the following form: LINK HERE.
+## Questionnaires
+A questionnaire is given to you along with the experiment, you can answer the first section before getting on with the rest of the experiment and get back to it when asked to.(There will be a post-tutorial section, as well as a post experiment section)
 
 ## Tutorial
 
 In order to get you started with the pivo approach, we devised a tutorial, available in your browser or locally, it should be around 30 minutes and can be accessed here: [tutorial](https://github.com/CharlyReux/evolvable-by-design-tutorial).
-
-
-## Post-tutorial Questionnaire
-Before starting the experiment, please fill in the following questionnaire: LINK HERE 
-
+Once done, you can answer the post-tutorial section in the questionnaire.
 
 ## Experiment
 
-The experiment is situated here https://github.com/CharlyReux/evolvable-by-design-todomvc-frontend/tree/experiment-start, you can now follow the instructions in the README.
+The experiment is situated here https://github.com/CharlyReux/evolvable-by-design-todomvc-frontend/tree/experiment-start, you can follow the instructions in the README.
+Once done, you can answer the Experiment section in the questionnaire.
