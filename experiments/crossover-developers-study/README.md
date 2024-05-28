@@ -11,7 +11,8 @@ You will implement this application twice, using two different methods to connec
 You are given 2h to implement the pivo version of the frontend application and to update it to four evolutions of the REST API, and 1h30 to implement the pivo version of the frontend application and to update it to four evolutions. Hence, our goal with this study is to obtain your feedbacks about the new method proposed by Pivo to design frontend applications.
 
 ## Questionnaires
-A questionnaire is given to you along with the experiment, you can answer the first section before getting on with the rest of the experiment and get back to it when asked to.(There will be a post-tutorial section, as well as a post experiment section)
+A questionnaire has been given to you along with the experiment, you can answer the first section before getting on with the rest of the experiment and get back to it when asked.(There will be a post-tutorial section, as well as a post experiment section)  
+The link is available [here](https://forms.gle/xMJjYEPwMQthoznw6)
 
 ## Tutorial
 
