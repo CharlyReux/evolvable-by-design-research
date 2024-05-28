@@ -1,0 +1,124 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Object rest API
+  contact:
+    name: John Smith
+    email: john.smith@mail.com
+servers:
+  - url: http://example.com:8080/rest
+    description: example server
+paths:
+  /my_objects:
+    get:
+      parameters:
+        - name: objectAttribute
+          in: query
+          description: The attribute of the objects to get
+          x-@id: http://vocabulary.io/myVoc#objectAttribute
+          schema: 
+            $ref: '#/components/schemas/objectAttribute'
+            default: false
+
+      operationId: getAllObjects
+      responses:
+        '200':
+          description: list of objects
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/objectList'
+          links:
+            createObject:
+              operationId: createObject
+              x-relation: http://vocabulary.io/myVoc/rel#Create
+    post:
+      operationId: createObject
+      x-@id: http://vocabulary.io/myVoc#CreateObject
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/object'
+      responses:
+        '201':
+          description: The created todo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/object'
+          links:
+            delete:
+              operationId: deleteObject
+              x-@relation: http://vocabulary.io/myVoc/rel#Delete
+              parameters:
+                id: '$response.body#/id'
+            get:
+              operationId: deleteObject
+              x-@relation: http://vocabulary.io/myVoc/rel#GetObject
+              parameters:
+                id: '$response.body#/id'
+  /my_object/{id}:
+    parameters:
+      - name: id
+        in: path
+        description: The id of the object to get
+        x-@id: http://vocabulary.io/myVoc#objectId
+        required: true
+        schema: 
+          $ref: '#/components/schemas/objectId'
+    get:
+      responses:
+        '200':
+          description: object with the id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/object'
+          links:
+            getAll:
+              operationId: getAllObjects
+              x-relation: http://vocabulary.io/myVoc/rel#GetAll
+            delete:
+              operationId: deleteObject
+              x-@relation: http://vocabulary.io/myVoc/rel#Delete
+              parameters:
+                id: '$response.body#/id'
+    delete:
+      operationId: deleteObject
+      responses:
+        '204':
+          description: confirmation
+          links:
+            getAll:
+              operationId: getAllObjects
+              x-relation: http://vocabulary.io/myVoc/rel#GetAll
+
+components:
+  schemas:
+    objectList:
+      type: object
+      x-@type: http://vocabulary.io/myVoc#objectList
+      properties:
+        objects:
+          type: array
+          items:
+            $ref: '#/components/schemas/object'
+    object:
+      type: object
+      x-@type: http://vocabulary.io/myVoc#objectType
+      properties:
+        id:
+          $ref: '#/components/schemas/objectId'
+        name:
+          type: string
+          x-@id: http://schema.org/name
+        attribute:
+          $ref: '#/components/schemas/objectAttribute'
+
+    objectId:
+      type: string
+      x-@id: http://vocabulary.io/myVoc#objectId
+    objectAttribute:
+      type: boolean
+      x-@id: http://vocabulary.io/myVoc#objectAttribute  
