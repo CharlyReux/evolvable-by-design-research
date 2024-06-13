@@ -237,7 +237,7 @@ const objectId = await user.getOneValue("http://vocabulary.io/myVoc#objectId")
 <td>
 
 ```javascript
-  if(creationResponse.isRelationAvailable("http://vocabulary.io/myVoc/rel#Delete")){
+  if(creationResponse.data.isRelationAvailable("http://vocabulary.io/myVoc/rel#Delete")){
     ...
   }
 ```
