@@ -13,9 +13,9 @@ In order to get started, you only have to carefully follow the instructions give
 
 Thanks again for participating.
 
-Charly Reux
-Research Engineer
-www.inria.fr  
+Charly Reux  
+Research Engineer  
+www.inria.fr    
 ![](./RF-Inria_logo_signat.jpg)
 
 
