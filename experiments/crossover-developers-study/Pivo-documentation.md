@@ -125,7 +125,7 @@ components:
           x-@id: http://schema.org/name
         attribute:
           $ref: '#/components/schemas/objectAttribute'
-
+  
     objectId:
       type: string
       x-@id: http://vocabulary.io/myVoc#objectId
@@ -142,7 +142,6 @@ components:
 	<thead>
 		<tr>
 			<th>Use-case</th>
-			<th>OpenApi file</th>
 			<th>Pivo Usage</th>
 		</tr>
 	</thead>
@@ -156,7 +155,7 @@ import Pivo from '@evolvable-by-design/pivo'
 ...
 const response = await axios.get(url)
 const specString = await response.data
-const pivo = new Pivo(documentation)
+const pivo = new Pivo(specString)
 
 ```
 Or
@@ -184,6 +183,18 @@ const myObjectOperation = pivo
 ```javascript
 const objectAttribute = true
 const myObjectResponse = await myObjectOperation.invoke({["http://vocabulary.io/myVoc#objectAttribute"]:objectAttribute})
+```
+
+</td>
+
+</tr>
+<tr>
+<tr>
+<td><b>Getting an array from a response</b></td>
+<td>
+
+```javascript
+const myObjectArray = await myObjectResponse.data.getArray("http://vocabulary.io/myVoc#objectList")
 ```
 
 </td>
@@ -221,13 +232,12 @@ const creationResponse = await creationOperation.invoke(objectToCreate)
 
 </tr>
 <tr>
-<td><b>Getting a value in an object, based on a semantic key</b></td>
+<td><b>Getting a value or an array in an object, based on a semantic key</b></td>
 <td>
 
 ```javascript
 const objectId = await user.getOneValue("http://vocabulary.io/myVoc#objectId")
 ```
-
 </td>
 
 </tr>
