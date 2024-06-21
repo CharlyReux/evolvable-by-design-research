@@ -9,9 +9,12 @@ This experiment starts with an easy tutorial on how to use the Evolvable-By-Desi
 
 You will be using a React library called Pivo, that implements the Evolvable-By-Design approach. But you don't need to be an expert in React to do the experiment, as far as you have prior knowledge in Web Technologies.
 
-In order to get started, you only have to carefully follow the instructions given to you in the README in this repository https://github.com/CharlyReux/evolvable-by-design-research/tree/master/experiments/crossover-developers-study.
+In order to get started, you have to carefully follow the instructions given to you in the README in this repository https://github.com/CharlyReux/evolvable-by-design-research/tree/master/experiments/crossover-developers-study.
 
-Thanks again for participating.
+Upon starting the experiment, you will be asked to choose a number, you were assigned the number {NUMBER}
+
+Thanks again for participating.  
+If you need any help, feel free to contact me at charly.reux@inria.fr.
 
 Charly Reux  
 Research Engineer  
